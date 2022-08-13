@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const recipeSchema = new Schema({
-  title: String,
+  title: {type: string, unique:true, required: true}; //what do we call the part 'unique: true' ? is i the property? //
   enum:|'Easy Peasy', 'Amateur Chef', 'UltraPro Chef'|,
   level: String,
   Ingredients:[string],
